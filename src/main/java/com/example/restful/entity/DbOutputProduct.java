@@ -1,5 +1,6 @@
 package com.example.restful.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,5 +26,6 @@ public class DbOutputProduct {
     private Double price;
 
     @ManyToOne(optional = false)
+    @JsonBackReference
     private DbOutput dbOutput;
 }
